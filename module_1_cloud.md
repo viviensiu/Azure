@@ -7,7 +7,7 @@
     - Compute power: how much processing your computer can do.
     - Storage.
 
-** Shared responsibility model**
+**Shared responsibility model**
 * In traditional data centers, companies are responsible for: 
     - Maintaining the physical space, security, maintaining or replacing the servers. 
     - Infrastructure and software needed to keep the datacenter up and running. 
@@ -22,3 +22,18 @@
     - IaaS: Infrastructure as a service, 
     - PaaS: Platform as a service, 
     - SaaS: Software as a service.
+![shared responsibilities of IaaS, PaaS, SaaS](https://raw.githubusercontent.com/viviensiu/Azure/main/images/shared-responsibility.svg)
+* When using a cloud provider, you’ll always be responsible for:
+    - The information and data stored in the cloud
+    - Devices that are allowed to connect to your cloud (cell phones, computers, and so on)
+    - The accounts and identities of the people, services, and devices within your organization
+
+* The cloud provider is always responsible for:
+    - The physical datacenter
+    - The physical network
+    - The physical hosts
+* Your service model will determine responsibility for things like:
+    - Operating systems
+    - Network controls
+    - Applications
+    - Identity and infrastructure
