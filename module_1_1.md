@@ -69,8 +69,8 @@
 **Consumption-based model**
 
 * 2 types of model:
-    * Capital expenditure (CapEx): One-time, up-front expenditure to purchase or secure tangible resources, e.g. new building.
-    * Operational expenditure (OpEx): Spending money on services or products over time.
+    * **Capital expenditure (CapEx)**: One-time, up-front expenditure to purchase or secure tangible resources, e.g. new building.
+    * **Operational expenditure (OpEx)**: Spending money on services or products over time.
 * Cloud computing falls under OpEx because cloud computing operates on a consumption-based model, it does not incur cost on physical infrastructure or its related upkeep, but you pay for the IT resources you use. This brings benefits such as:
     - No upfront costs.
     - No need to purchase and manage costly infrastructure that users might not use to its fullest potential.

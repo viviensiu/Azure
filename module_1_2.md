@@ -2,8 +2,8 @@
 
 **Benefits of high availability and scalability in the cloud**
 When building or deploying a cloud application, two of the biggest considerations are:
-    - Uptime (or Availability) 
-    - Ability to handle demand (or scale).
+- Uptime (or Availability) 
+- Ability to handle demand (or scale).
 
 **High availability**
 - High availability focuses on ensuring maximum availability, regardless of disruptions or events.
