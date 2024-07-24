@@ -52,13 +52,13 @@
     - Uses both public and private clouds in an inter-connected environment. 
     - Can be used to allow a private cloud to surge for temporary demand by deploying public cloud resources. 
     - Can be used to provide an extra layer of security. For example, users can flexibly choose which services to keep in public cloud and which to deploy to their private cloud infrastructure.
-    
+
 | Public cloud | Private cloud | Hybrid cloud |
 |-------------------------------------||-------------------------------------|-------------------------------------|
 | No capital expenditures to scale up | Organizations have complete control over resources and security | Provides the most flexibility |
 | Applications can be quickly provisioned and deprovisioned | Data is not collocated with other organizations’ data | Organizations determine where to run their applications |
 | Organizations pay only for what they use | Hardware must be purchased for startup and maintenance | Organizations control security, compliance, or legal requirements |
-| Organizations don’t have complete control over resources and security | Organizations are responsible for hardware maintenance and updates | |
+| Organizations don’t have complete control over resources and security | Organizations are responsible for hardware maintenance and updates | N/A |
 * **Other Cloud models**
     - Multi-cloud: multiple cloud providers
 * **Azure Arc**: Manages private/public/hybrid/multi-cloud environments.
