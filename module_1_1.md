@@ -1,3 +1,5 @@
+## Cloud Concepts: Describe Cloud Computing
+
 **What is cloud computing?**
 - Delivery of computing services over the internet, such as common IT infrastructure plus IoT, ML and AI.
 - Services are hosted in data centers owned by cloud providers.
