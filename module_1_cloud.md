@@ -52,6 +52,7 @@
     - Uses both public and private clouds in an inter-connected environment. 
     - Can be used to allow a private cloud to surge for temporary demand by deploying public cloud resources. 
     - Can be used to provide an extra layer of security. For example, users can flexibly choose which services to keep in public cloud and which to deploy to their private cloud infrastructure.
+    
 | Public cloud | Private cloud | Hybrid cloud |
 |-------------------------------------||-------------------------------------|-------------------------------------|
 | No capital expenditures to scale up | Organizations have complete control over resources and security | Provides the most flexibility |
