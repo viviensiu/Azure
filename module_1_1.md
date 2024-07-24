@@ -67,17 +67,18 @@
 * **Azure VMware Solution**: allows redeploy, extend and run VMWare workloads that was established in private cloud when the private cloud is migrated to in public cloud (Azure).
 
 **Consumption-based model**
-2 types of model:
-    - Capital expenditure (CapEx): One-time, up-front expenditure to purchase or secure tangible resources, e.g. new building.
-    - Operational expenditure (OpEx): Spending money on services or products over time.
-Cloud computing falls under OpEx because cloud computing operates on a consumption-based model, it does not incur cost on physical infrastructure or its related upkeep, but you pay for the IT resources you use. This brings benefits such as:
+
+* 2 types of model:
+    * Capital expenditure (CapEx): One-time, up-front expenditure to purchase or secure tangible resources, e.g. new building.
+    * Operational expenditure (OpEx): Spending money on services or products over time.
+* Cloud computing falls under OpEx because cloud computing operates on a consumption-based model, it does not incur cost on physical infrastructure or its related upkeep, but you pay for the IT resources you use. This brings benefits such as:
     - No upfront costs.
     - No need to purchase and manage costly infrastructure that users might not use to its fullest potential.
     - The ability to pay for more resources when they're needed.
     - The ability to stop paying for resources that are no longer needed.
 
 **Compare cloud pricing models**
-Pay-as-you-go pricing model: Typically pay only for the cloud services you use, which helps you:
+* Pay-as-you-go pricing model: Typically pay only for the cloud services you use, which helps you:
     - Plan and manage your operating costs.
     - Run your infrastructure more efficiently.
     - Scale as your business needs change.
