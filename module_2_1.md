@@ -28,9 +28,9 @@ The Azure free student account includes:
 Plus: 24x7 documentation, support and new services demo videos.
 
 **Core architectural components of Azure**
-2 groups:
-- Physical Infrastructure: Datacenters which are grouped into Azure Regions or Azure Availability Zones
-- Management Infrastructure.
+- 2 groups:
+    - Physical Infrastructure: Datacenters which are grouped into Azure Regions or Azure Availability Zones
+    - Management Infrastructure.
 
 **Azure Regions** 
 - Geographical area with at least one or multiple datacenters that are nearby and networked together with a low-latency network. 
