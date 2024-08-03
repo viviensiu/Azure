@@ -8,4 +8,5 @@ This repo documents my study notes in preparation for AZ-900 Certification Exam.
 ### Module 2 Microsoft Azure Fundamentals
 * 2.1 Describe Azure architecture and services
 * 2.2 Describe Azure compute and networking services
+* 2.3 Describe Azure storage services
 
