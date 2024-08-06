@@ -21,6 +21,7 @@
 **Storage account endpoints**
 * The combination of the storage account name and the Azure Storage service endpoint forms the endpoints for your storage account.
 * The following table shows the endpoint format for Azure Storage services.
+
 | Storage service | Endpoint |
 |-----------------|-----------------------|
 | Blob Storage | https://<storage-account-name>.blob.core.windows.net |
