@@ -99,3 +99,48 @@
 
 **Azure Tables** 
 * NoSQL table option for structured, non-relational data.
+
+**Azure data migration options**
+* 2 options:   
+    * Real-time migration using Azure Migrate.
+    * Asynchronous migration using Azure Data Box.
+
+**Azure Migrate**
+* Helps manage the assessment and migration of on-premises datacenter to Azure cloud. Provides the following:
+    * Unified migration platform: A single portal to start, run, and track your migration to Azure.
+    * Integrated tools including tools from independent software vendor (ISV).
+    * Assessment and migration: Using the Azure Migrate hub.
+* Integrated tools: 
+    * "Azure Migrate: Discovery and assessment": Discover and assess on-premises servers running on VMware, Hyper-V, and physical servers in preparation for migration to Azure.
+    * "Azure Migrate: Server Migration": Migrate VMware VMs, Hyper-V VMs, physical servers, other virtualized servers, and public cloud VMs to Azure.
+    * Data Migration Assistant: Stand-alone tool to assess SQL Servers. It helps pinpoint potential problems blocking migration, identifies unsupported features, new features that can benefit you after migration, and the right path for database migration.
+    * Azure Database Migration Service: Migrate on-premises databases to Azure VMs running SQL Server, Azure SQL Database, or SQL Managed Instances.
+    * Azure App Service migration assistant: Standalone tool to assess on-premises websites for migration to Azure App Service. Use Migration Assistant to migrate .NET and PHP web apps to Azure.
+    * Azure Data Box: Move large amounts of offline data to Azure.
+
+**Azure Data Box**
+* Physical migration service that helps transfer large amounts of data in a quick, inexpensive, and reliable way.
+* To import or export data from Azure. If to import data into Azure, Microsoft automatically uploads the data once they receive it.
+* Maximum usable storage capacity of 80 terabytes.
+* Use cases for importing data into Azure:
+    *Onetime migration.
+    * Moving a media library from offline tapes into Azure to create an online media library.
+    * Migrating your VM farm, SQL server, and applications to Azure.
+    * Moving historical data to Azure for in-depth analysis and reporting using HDInsight.
+    * Initial bulk transfer.
+    * Periodic uploads.
+* Use cases for exporting data from Azure:
+    * Disaster recovery.
+    * Security requirements.
+    * Migrate back to on-premises or to another cloud service provider.
+* Once the data from your import order is uploaded to Azure, the disks on the device are wiped clean in accordance with NIST 800-88r1 standards. For an export order, the disks are erased once the device reaches the Azure datacenter
+
+**Azure file movement options**
+* Helps you move or interact with individual files or small file groups.
+* AzCopy: Command-line utility to upload, download, copy blobs or files between storage account, synchronize files (uni-directional only).
+* Azure Storage Explorer: Standalone app with GUI to manage files and blobs in your Azure Storage Account, uses AzCopy on the backend.
+* Azure File Sync: Tool that lets you centralize your file shares in Azure Files.  Once you install Azure File Sync on your local Windows server, it will automatically stay bi-directionally synced with your files in Azure. With Azure File Sync, you can:
+    * Use any protocol that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS.
+    * Have as many caches as you need across the world.
+    * Replace a failed local server by installing Azure File Sync on a new server in the same datacenter.
+    * Configure cloud tiering so the most frequently accessed files are replicated locally, while infrequently accessed files are kept in the cloud until requested. 
