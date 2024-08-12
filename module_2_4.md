@@ -30,5 +30,56 @@
     * 2 Windows Server domain controllers are then deployed into your selected Azure region as a replica set. The DCs are managed by Azure as part of the managed domain.
 * Information synchronization:
     * One-way sync. from Microsoft Entra ID to Microsoft Entra Domain Services. Resources created directly inside MEDS are NOT sync back to Entra ID.
-    * In a hybrid environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft Entra ID, which is then synchronized to the managed domain. See image below:
+    * In a hybrid environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft Entra ID (bi-directional), which is then synchronized to the managed domain (uni-directional). See image below:
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/azure-active-directory-sync-topology.png)
+
+**Azure authentication method**
+* Security v.s. Convenience:
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/passwordless-convenience-security.png)
+
+**Single Sign-On (SSO)**
+* Enables a user to sign in one time and use that credential to access multiple resources and applications from different providers, where these providers must trust the initial authenticator.
+* **Note**: SSO is only as secure as the initial authenticator because the subsequent connections are all based on the security of the initial authenticator.
+* Benefits:
+    * Greatly reduces the effort needed to change or disable accounts.
+    * Easier for users to manage their identities.
+    * Easier for IT to manage users: account lockouts, password reset requests, disabling user identities.
+
+**Multifactor authentication** 
+* Process of prompting a user for an extra form (or factor) of identification during the sign-in process.
+* Additional security for your identities by requiring two or more elements to fully authenticate, elements such as:
+    * Something the user knows – this might be a challenge question.
+    * Something the user has – this might be a code that's sent to the user's mobile phone.
+    * Something the user is – this is typically some sort of biometric property, such as a fingerprint or face scan.
+* Microsoft Entra multifactor authentication: Enables users to choose an additional form of authentication during sign-in, such as a phone call or mobile app notification.
+
+**Passwordless authentication** 
+* Password is removed and replaced with something you have (e.g. your computer), plus something you are, or something you know.
+* Needs to be set up on a device before it can work. Once enrolled, you can be authenticated without using a password by providing something you know or are (such as a PIN or fingerprint).
+* Microsoft global Azure and Azure Government offer 3 passwordless authentication options that integrate with Microsoft Entra ID:
+    * Windows Hello for Business: For those with designated Windows PC. The biometric and PIN credentials are directly tied to the PC, which prevents access from anyone other than the owner. Also supports public key infrastructure (PKI) integration and SSO.
+    * Microsoft Authenticator app: Phone app. Sign-in by getting a notification to their phone, match a number displayed on the screen to the one on their phone, and then using their biometric (touch or face) or PIN to confirm.
+    * FIDO2 (Fast IDentity Online) security keys: Unphishable standards-based passwordless authentication method that can come in any form factor. Allows sign-in by using an external security key or a platform key built into a device. Users can register and then select a FIDO2 security key at the sign-in interface as their main means of authentication. These FIDO2 security keys are typically USB devices, but could also use Bluetooth or NFC. 
+
+**Microsoft Entra External ID** 
+* Ways you can securely interact with users outside of your organization to share your resources with them while you define how your internal users can access external organisations.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/azure-active-directory-external-identities.png)
+* 3 capabilities of External ID (you can use more than one):
+    * Business to business (B2B) collaboration: Allow external users to use their preferred identity to sign-in to your Microsoft applications or other enterprise applications (SaaS apps, custom-developed apps, etc.). B2B users are represented in your directory, typically as guest users.
+    * B2B direct connect: A mutual, two-way trust with another Microsoft Entra organization for seamless collaboration. Currently supports Teams shared channels, enabling external users to access your resources from their Teams instances. Not represented in your directory, visible from within the Teams shared channel and can be monitored in Teams admin center reports.
+    * Microsoft Azure AD business to customer (B2C): Publish modern SaaS apps or custom-developed apps (excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
+* With Microsoft Entra ID, you can use the Microsoft Entra B2B feature. Guest users from other tenants can be invited by administrators or by other users. This capability also applies to social identities such as Microsoft accounts.
+* To ensure appropriate access, a access review can be done based on suggestions from Microsoft Entra ID. When an access review is finished, you can then make changes and remove access for guests who no longer need it.
+
+**Conditional Access** 
+* A tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals.
+* During sign-in, Conditional Access collects signals from the user, makes decisions based on those signals, and then enforces that decision by allowing or denying the access request or challenging for a multifactor authentication response.
+* Signals: User's location, the user's device, or the application they try to access.
+* Decision: Allow full access if it's a usual location. If the user is signing in from an unusual/high risk location, then block access or grant after the user provides a second form of authentication.
+* Enforcement: Action that carries out the decision.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/conditional-access.png)
+* Conditional Access is useful when:
+    * Require multifactor authentication (MFA) to access an application depending on the requester’s role, location, or network.
+    * Require access to services only through approved client applications. 
+    * Require users to access your application only from managed devices.
+    * Block access from untrusted sources, such as access from unknown or unexpected locations.
