@@ -83,3 +83,27 @@
     * Require access to services only through approved client applications. 
     * Require users to access your application only from managed devices.
     * Block access from untrusted sources, such as access from unknown or unexpected locations.
+
+**Azure role-based access control (Azure RBAC)**
+* The principle of least privilege says you should only grant access up to the level needed to complete a task. 
+* Azure RBAC provides built-in roles or you can define your own roles. Each role has an associated set of access permissions that relate to that role. When you assign individuals or groups to one or more roles, they receive all the associated access permissions.
+* RBAC is applied to a scope (resource or set of resources that this access applies to). Scopes include:
+    * A management group (a collection of multiple subscriptions).
+    * A single subscription.
+    * A resource group.
+    * A single resource.
+* The following diagram shows the relationship between roles and scopes. A management group, subscription, or resource group might be given the role of owner, so they have increased control and authority. An observer, who isn't expected to make any updates, might be given a role of Reader for the same scope, enabling them to review or observe the management group, subscription, or resource group.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/role-based-access-scope.png)
+* Azure RBAC is hierarchical, in that when you grant access at a parent scope, those permissions are inherited by all child scopes.
+* Azure RBAC is enforced on any action that's initiated against an Azure resource that passes through Azure Resource Manager. You typically access Resource Manager from the Azure portal, Azure Cloud Shell, Azure PowerShell, and the Azure CLI. 
+* **Note**: Azure RBAC doesn't enforce access permissions at the application or data level. 
+* Uses an allow model: When you're assigned a role, Azure RBAC allows you to perform actions within the scope of that role. If one role assignment grants you read permissions to a resource group and a different role assignment grants you write permissions to the same resource group, you have both read and write permissions on that resource group.
+
+**Zero Trust Model**
+* A security model that assumes the worst case scenario and protects resources with that expectation. 
+* Based on these guiding principles:
+    * Verify explicitly: Always authenticate and authorize based on all available data points.
+    * Use least privilege access: Limit user access with Just-In-Time and Just-Enough-Access (JIT/JEA), risk-based adaptive policies, and data protection.
+    * Assume breach: Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
+* Traditional networks adopts a location-based access by assuming that everything within the secured network is safe. Zero Trust flips that assumption and grants access based on authentication rather than location.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/zero-trust.png)
