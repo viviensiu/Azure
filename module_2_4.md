@@ -107,3 +107,75 @@
     * Assume breach: Minimize blast radius and segment access. Verify end-to-end encryption. Use analytics to get visibility, drive threat detection, and improve defenses.
 * Traditional networks adopts a location-based access by assuming that everything within the secured network is safe. Zero Trust flips that assumption and grants access based on authentication rather than location.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/zero-trust.png)
+
+**Defense-in-depth**
+* Objective: Protect information and prevent it from being stolen by unauthorized personnel.
+* Strategies: Uses a series of mechanisms to slow the advance of an attack that aims at acquiring unauthorized access to data. 
+* Layers of defense-in-depth: ![alt text](https://github.com/viviensiu/Azure/blob/main/images/defense-depth.png)
+* Removes reliance on single layer of protection, slows attack and alerts security authorities.
+* Physical security layer: 
+    * First line of defense to protect computing hardware in the datacenter. Secures access to buildings and controls access to computing hardware within the datacenter.
+* Identity and access layer: 
+    * Control access to infrastructure and change control.
+    * Use single sign-on (SSO) and multifactor authentication.
+    * Audit events and changes.
+* Perimeter layer: Defense against network-based attacks. 
+    * Uses DDoS protection to filter large-scale attacks before they can cause a denial of service for users.
+    * Use perimeter firewalls to identify and alert on malicious attacks against your network.
+* Network layer: Limits network connectivity to reduce risk of attack spreading to other systems.
+    * Limit communication between resources.
+    * Deny by default.
+    * Restrict inbound internet access and limit outbound access where appropriate.
+    * Implement secure connectivity to on-premises networks.
+* Compute layer: Making sure compute resources are secure.
+    * Secures access to virtual machines.
+    * Implement endpoint protection on devices and keep systems patched and current.
+* Application layer: 
+    * Ensure that applications are secure and free of vulnerabilities.
+    * Store sensitive application secrets in a secure storage medium.
+    * Make security a design requirement for all application development.
+* Data layer: Controls access to business and customer data that you need to protect. Often, regulatory requirements dictate the controls and processes that must be in place to ensure the confidentiality, integrity, and availability of the data. In almost all cases, attackers are after data:
+    * Stored in a database.
+    * Stored on disk inside virtual machines.
+    * Stored in software as a service (SaaS) applications, such as Office 365.
+    * Managed through cloud storage.
+
+**Microsoft Defender for Cloud**
+* A monitoring tool for security posture management and threat protection. It monitors cloud, on-premises, hybrid, and multi-cloud environments to provide guidance and notifications aimed at strengthening your security posture.
+* An Azure-native service which already monitors and protect Azure services without deployment.
+* Deploys a Log Analytics agent to gather security-related data. This is direct on Azure. For hybrid and multi-cloud, Microsoft Defender plans are extended to non Azure machines with the help of Azure Arc. Cloud security posture management (CSPM) features are extended to multi-cloud machines without the need for any agents.
+* Azure-native protections:
+    * Azure PaaS services: Detect threats targeting Azure services. You can also perform anomaly detection on your Azure activity logs using the native integration with Microsoft Defender for Cloud Apps (formerly known as Microsoft Cloud App Security).
+    * Azure data services: Help you automatically classify your data in Azure SQL. You can also get assessments for potential vulnerabilities across Azure SQL and Storage services, and recommendations for how to mitigate them.
+    * Networks: Helps limit exposure to brute force attacks. By reducing access to VM ports, using the just-in-time VM access, you can harden your network by preventing unnecessary access. You can set secure access policies on selected ports, for only authorized users, allowed source IP address ranges or IP addresses, and for a limited amount of time.
+* Defend your hybrid resources:
+    * Add Defender for Cloud capabilities to your hybrid cloud environment to protect your non-Azure servers.
+    * For on-premises machines, deploy Azure Arc and enable Defender for Cloud's enhanced security features.
+* Defend resources running on other clouds (e.g. AWS and GCP):
+    * Defender for Cloud's CSPM features extend to your AWS resources. This agentless plan assesses your AWS resources according to AWS-specific security recommendations, and includes the results in the secure score. The resources will also be assessed for compliance with built-in standards specific to AWS. Defender for Cloud's asset inventory page is a multi-cloud enabled feature helping you manage your AWS resources alongside your Azure resources.
+    * Microsoft Defender for Containers extends its container threat detection and advanced defenses to your Amazon EKS Linux clusters.
+    * Microsoft Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2 instances.
+
+**Assess, Secure, and Defend**
+* 3 vital needs as you manage the security of your resources and workloads in the cloud and on-premises:
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/assess-secure-defend.png)
+* Continuously assess:
+    * Vulnerability assessment solutions for VMs, container registries, and SQL servers.
+    * Microsoft Defender for servers integration with Microsoft Defender for Endpoint provides vulnerability findings from Microsoft threat and vulnerability management.
+    * Between these assessment tools you’ll have regular, detailed vulnerability scans that cover your compute, data, and infrastructure. You can review and respond to the results of these scans all from within Defender for Cloud.
+* Secure:
+    * Policies in Defender for Cloud are built on top of Azure Policy controls. In Defender for Cloud, you can set your policies to run on management groups, across subscriptions, and even for a whole tenant.
+    * Constantly assess if new resources are configured according to security best practices. If not, they're flagged and you get a prioritized list of recommendations for what you need to fix.
+    * The list of recommendations is enabled and supported by the Azure Security Benchmark. This Microsoft-authored, Azure-specific, benchmark provides a set of guidelines for security and compliance best practices based on common compliance frameworks. In this way, Defender for Cloud enables you not just to set security policies, but to apply secure configuration standards across your resources.
+    * Defender for Cloud groups the recommendations into security controls and adds a secure score value to each control. The secure score gives you an at-a-glance indicator of the health of your security posture, while the controls give you a working list of things to consider to improve your security score and your overall security posture. ![alt text](https://github.com/viviensiu/Azure/blob/main/images/defender-for-cloud.png)
+* Defend:
+    * Defender for Cloud provides security alert which:
+        * Describe details of the affected resources.
+        * Suggest remediation steps.
+        * Provide, in some cases, an option to trigger a logic app in response.
+    * Alerts can be exported.
+    * Defender for Cloud's threat protection includes fusion kill-chain analysis, which automatically correlates alerts in your environment based on cyber kill-chain analysis, to help you better understand the full story of an attack campaign, where it started, and what kind of impact it had on your resources.
+    * Advanced threat protection:
+        * Securing the management ports of your VMs with just-in-time access. 
+        * Adaptive application controls to create allowlists for what apps should and shouldn't run on your machines.
+
