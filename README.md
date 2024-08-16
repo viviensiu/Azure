@@ -12,4 +12,4 @@ This repo documents my study notes in preparation for AZ-900 Certification Exam.
 * 2.4 Describe Azure identity, access, and security
 
 ### Module 3 Microsoft Azure Fundamentals: Describe Azure management and governance
-* 3.1
+* 3.1 Describe cost management in Azure
