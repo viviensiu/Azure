@@ -18,3 +18,12 @@
 * Subscription type: Costs are affected by the usage allowances in your subscription, e.g. a free trial subscription offers access to a number of Azure products that are free for 12 months. It also includes $200 credit to spend within your first 30 days of sign-up. You'll get access to more than 25 products that are always free (based on resource and region availability).
 * Azure Marketplace: A place to purchase Azure-based solutions and services from third-party vendors. You may pay for not only the Azure services that you’re using, but also the services or expertise of the third-party vendor. Billing structures are set by the vendor. These solutions are certified and compliant with Azure policies and standards. Certification policies may vary based on the service or solution type and Azure service involved.
 
+**Pricing and Total Cost of Ownership (TCO) calculators**
+* Pricing calculator: To estimate the cost of any provisioned resources, including compute, storage, and associated network costs. You can even account for different storage options like storage type, access tier, and redundancy. Nothing is provisioned when you add resources to the pricing calculator, and you won't be charged for any services you select.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/price-calculator.png)
+* TCO calculator: Helps compare the costs for running an on-premises infrastructure compared to an Azure Cloud infrastructure.  You enter your current infrastructure configuration, including servers, databases, storage, and outbound network traffic, plus power and IT labor costs. The TCO calculator then compares the anticipated costs for your current environment with the same Azure environment.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/total-cost-ownership.png)
+
+**Microsoft Cost Management tool**
+* Cost Management: Service to quickly check Azure resource costs, create alerts based on resource spend, and create budgets that can be used to automate management of resources. This helps to stay aware of your resource costs and prevent surprise costs.
+* Cost analysis: Subset of Cost Management to provide a quick visual for your Azure costs. You can quickly view the total cost in a variety of different ways, including by billing cycle, region, resource, and so on. 
