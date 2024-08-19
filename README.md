@@ -13,3 +13,5 @@ This repo documents my study notes in preparation for AZ-900 Certification Exam.
 
 ### Module 3 Microsoft Azure Fundamentals: Describe Azure management and governance
 * 3.1 Describe cost management in Azure
+* 3.2 Describe features and tools in Azure for governance and compliance
+
