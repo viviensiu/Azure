@@ -1,6 +1,6 @@
 ## Cloud Concepts: Describe Cloud Computing
 
-**What is cloud computing?**
+### What is cloud computing?
 - Delivery of computing services over the internet, such as common IT infrastructure plus IoT, ML and AI.
 - Services are hosted in data centers owned by cloud providers.
 - You only pay for only the service you used.
@@ -9,7 +9,7 @@
     - Compute power: how much processing your computer can do.
     - Storage.
 
-**Shared responsibility model**
+### Shared responsibility model
 * In traditional data centers, companies are responsible for: 
     - Maintaining the physical space, security, maintaining or replacing the servers. 
     - Infrastructure and software needed to keep the datacenter up and running. 
@@ -40,7 +40,7 @@
     - Applications (IaaS: customer, PaaS: shared, SaaS: Microsoft)
     - Identity and infrastructure (IaaS: customer, PaaS and SaaS: shared)
 
-**Cloud models**
+### Cloud models
 * 3 types: Private, Public, Hybrid.
 * **Private Cloud**:
     - Used by a single entity
@@ -66,8 +66,7 @@
 * **Azure Arc**: Manages private/public/hybrid/multi-cloud environments.
 * **Azure VMware Solution**: allows redeploy, extend and run VMWare workloads that was established in private cloud when the private cloud is migrated to in public cloud (Azure).
 
-**Consumption-based model**
-
+### Consumption-based model
 * 2 types of model:
     * **Capital expenditure (CapEx)**: One-time, up-front expenditure to purchase or secure tangible resources, e.g. new building.
     * **Operational expenditure (OpEx)**: Spending money on services or products over time.
@@ -77,7 +76,7 @@
     - The ability to pay for more resources when they're needed.
     - The ability to stop paying for resources that are no longer needed.
 
-**Compare cloud pricing models**
+### Compare cloud pricing models
 * Pay-as-you-go pricing model: Typically pay only for the cloud services you use, which helps you:
     - Plan and manage your operating costs.
     - Run your infrastructure more efficiently.
