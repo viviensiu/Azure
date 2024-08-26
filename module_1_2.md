@@ -48,12 +48,12 @@ When building or deploying a cloud application, two of the biggest consideration
 - PaaS: Patches and maintenance taken care of automatically.
 - Because the cloud is intended as an over-the-internet delivery of IT resources, cloud providers are typically well suited to handle things like distributed denial of service (DDoS) attacks, making your network more robust and secure.
 
-### Management of the cloud
-- Implies managing your cloud resources. 
+### Manageability in the cloud
+**Management of the cloud** speaks to managing your cloud resources. 
 - Automatically scale resource deployment based on need.
 - Deploy resources based on a preconfigured template, removing the need for manual configuration.
-- - Monitor the health of resources and automatically replace failing resources.
-Receive automatic alerts based on configured metrics, so you’re aware of performance in real time.
+- Monitor the health of resources and automatically replace failing resources.
+- Receive automatic alerts based on configured metrics, so you’re aware of performance in real time.
 
 **Management in the cloud** means how you’re able to manage your cloud environment and resources. 
 - 4 ways:
@@ -62,5 +62,6 @@ Receive automatic alerts based on configured metrics, so you’re aware of perfo
     - Using APIs.
     - Using PowerShell.
 
-
+### Summary
+In this module, you learned about some of the benefits of operating in the cloud. You learned about high availability and reliability, and how those work to keep your applications running. You also learned about how the cloud can provide a more secure environment. Finally, you learned that the cloud provides a highly manageable environment for your resources.
 

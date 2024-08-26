@@ -80,5 +80,5 @@
     - Scale as your business needs change.
 Imagine that you're just renting someone else's infrastructure and return it once you don't need it anymore to cut rental costs :)
 
-**Summary**
+### Summary
 In this module, you learned about general cloud concepts. You started with things like just understanding what cloud computing is. You also learned about the shared responsibility model and how you and your cloud provider share the responsibility of keeping your information in the cloud secure. You briefly covered the differences between the cloud models (public, private, hybrid, and multi-cloud). Then, you wrapped up with a unit on how the cloud shifts IT spend from a capital expense to an operational expense.
