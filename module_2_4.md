@@ -1,6 +1,6 @@
 ## Microsoft Azure Fundamentals: Describe Azure identity, access, and security
 
-**Azure directory services**
+### Azure directory services
 * Microsoft Entra ID and Microsoft Entra Domain Services.
 
 **Microsoft Entra ID**
@@ -28,12 +28,12 @@
 * How does MEDS work:
     * Create a MEDS managed domain and define a unique namespace to be the domain name.
     * 2 Windows Server domain controllers are then deployed into your selected Azure region as a replica set. The DCs are managed by Azure as part of the managed domain.
-* Information synchronization:
+* **Information synchronization**:
     * One-way sync. from Microsoft Entra ID to Microsoft Entra Domain Services. Resources created directly inside MEDS are NOT sync back to Entra ID.
     * In a hybrid environment with an on-premises AD DS environment, Microsoft Entra Connect synchronizes identity information with Microsoft Entra ID (bi-directional), which is then synchronized to the managed domain (uni-directional). See image below:
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/azure-active-directory-sync-topology.png)
 
-**Azure authentication method**
+### Azure authentication method
 * Security v.s. Convenience:
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/passwordless-convenience-security.png)
 
@@ -57,21 +57,22 @@
 * Password is removed and replaced with something you have (e.g. your computer), plus something you are, or something you know.
 * Needs to be set up on a device before it can work. Once enrolled, you can be authenticated without using a password by providing something you know or are (such as a PIN or fingerprint).
 * Microsoft global Azure and Azure Government offer 3 passwordless authentication options that integrate with Microsoft Entra ID:
-    * Windows Hello for Business: For those with designated Windows PC. The biometric and PIN credentials are directly tied to the PC, which prevents access from anyone other than the owner. Also supports public key infrastructure (PKI) integration and SSO.
-    * Microsoft Authenticator app: Phone app. Sign-in by getting a notification to their phone, match a number displayed on the screen to the one on their phone, and then using their biometric (touch or face) or PIN to confirm.
-    * FIDO2 (Fast IDentity Online) security keys: Unphishable standards-based passwordless authentication method that can come in any form factor. Allows sign-in by using an external security key or a platform key built into a device. Users can register and then select a FIDO2 security key at the sign-in interface as their main means of authentication. These FIDO2 security keys are typically USB devices, but could also use Bluetooth or NFC. 
+    * **Windows Hello for Business**: For those with designated Windows PC. The biometric and PIN credentials are directly tied to the PC, which prevents access from anyone other than the owner. Also supports public key infrastructure (PKI) integration and SSO.
+    * **Microsoft Authenticator app**: Phone app. Sign-in by getting a notification to their phone, match a number displayed on the screen to the one on their phone, and then using their biometric (touch or face) or PIN to confirm.
+    * **FIDO2 (Fast IDentity Online) security keys**: Unphishable standards-based passwordless authentication method that can come in any form factor. Allows sign-in by using an external security key or a platform key built into a device. Users can register and then select a FIDO2 security key at the sign-in interface as their main means of authentication. These FIDO2 security keys are typically USB devices, but could also use Bluetooth or NFC. 
 
+### Azure External Identities
 **Microsoft Entra External ID** 
 * Ways you can securely interact with users outside of your organization to share your resources with them while you define how your internal users can access external organisations.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/azure-active-directory-external-identities.png)
 * 3 capabilities of External ID (you can use more than one):
-    * Business to business (B2B) collaboration: Allow external users to use their preferred identity to sign-in to your Microsoft applications or other enterprise applications (SaaS apps, custom-developed apps, etc.). B2B users are represented in your directory, typically as guest users.
-    * B2B direct connect: A mutual, two-way trust with another Microsoft Entra organization for seamless collaboration. Currently supports Teams shared channels, enabling external users to access your resources from their Teams instances. Not represented in your directory, visible from within the Teams shared channel and can be monitored in Teams admin center reports.
-    * Microsoft Azure AD business to customer (B2C): Publish modern SaaS apps or custom-developed apps (excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
+    * **Business to business (B2B) collaboration**: Allow external users to use their preferred identity to sign-in to your Microsoft applications or other enterprise applications (SaaS apps, custom-developed apps, etc.). B2B users are represented in your directory, typically as guest users.
+    * **B2B direct connect**: A mutual, two-way trust with another Microsoft Entra organization for seamless collaboration. Currently supports Teams shared channels, enabling external users to access your resources from their Teams instances. Not represented in your directory, visible from within the Teams shared channel and can be monitored in Teams admin center reports.
+    * **Microsoft Azure AD business to customer (B2C)**: Publish modern SaaS apps or custom-developed apps (excluding Microsoft apps) to consumers and customers, while using Azure AD B2C for identity and access management.
 * With Microsoft Entra ID, you can use the Microsoft Entra B2B feature. Guest users from other tenants can be invited by administrators or by other users. This capability also applies to social identities such as Microsoft accounts.
 * To ensure appropriate access, a access review can be done based on suggestions from Microsoft Entra ID. When an access review is finished, you can then make changes and remove access for guests who no longer need it.
 
-**Conditional Access** 
+### Azure Conditional Access 
 * A tool that Microsoft Entra ID uses to allow (or deny) access to resources based on identity signals.
 * During sign-in, Conditional Access collects signals from the user, makes decisions based on those signals, and then enforces that decision by allowing or denying the access request or challenging for a multifactor authentication response.
 * Signals: User's location, the user's device, or the application they try to access.
@@ -84,7 +85,7 @@
     * Require users to access your application only from managed devices.
     * Block access from untrusted sources, such as access from unknown or unexpected locations.
 
-**Azure role-based access control (Azure RBAC)**
+### Azure role-based access control (Azure RBAC)
 * The principle of least privilege says you should only grant access up to the level needed to complete a task. 
 * Azure RBAC provides built-in roles or you can define your own roles. Each role has an associated set of access permissions that relate to that role. When you assign individuals or groups to one or more roles, they receive all the associated access permissions.
 * RBAC is applied to a scope (resource or set of resources that this access applies to). Scopes include:
@@ -99,7 +100,7 @@
 * **Note**: Azure RBAC doesn't enforce access permissions at the application or data level. 
 * Uses an allow model: When you're assigned a role, Azure RBAC allows you to perform actions within the scope of that role. If one role assignment grants you read permissions to a resource group and a different role assignment grants you write permissions to the same resource group, you have both read and write permissions on that resource group.
 
-**Zero Trust Model**
+### Zero Trust Model
 * A security model that assumes the worst case scenario and protects resources with that expectation. 
 * Based on these guiding principles:
     * Verify explicitly: Always authenticate and authorize based on all available data points.
@@ -108,43 +109,43 @@
 * Traditional networks adopts a location-based access by assuming that everything within the secured network is safe. Zero Trust flips that assumption and grants access based on authentication rather than location.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/zero-trust.png)
 
-**Defense-in-depth**
+### Defense-in-depth
 * Objective: Protect information and prevent it from being stolen by unauthorized personnel.
 * Strategies: Uses a series of mechanisms to slow the advance of an attack that aims at acquiring unauthorized access to data. 
 * Layers of defense-in-depth: ![alt text](https://github.com/viviensiu/Azure/blob/main/images/defense-depth.png)
 * Removes reliance on single layer of protection, slows attack and alerts security authorities.
-* Physical security layer: 
+* **Physical security layer**: 
     * First line of defense to protect computing hardware in the datacenter. Secures access to buildings and controls access to computing hardware within the datacenter.
-* Identity and access layer: 
+* **Identity and access layer**: 
     * Control access to infrastructure and change control.
     * Use single sign-on (SSO) and multifactor authentication.
     * Audit events and changes.
-* Perimeter layer: Defense against network-based attacks. 
+* **Perimeter layer**: Defense against network-based attacks. 
     * Uses DDoS protection to filter large-scale attacks before they can cause a denial of service for users.
     * Use perimeter firewalls to identify and alert on malicious attacks against your network.
-* Network layer: Limits network connectivity to reduce risk of attack spreading to other systems.
+* **Network layer**: Limits network connectivity to reduce risk of attack spreading to other systems.
     * Limit communication between resources.
     * Deny by default.
     * Restrict inbound internet access and limit outbound access where appropriate.
     * Implement secure connectivity to on-premises networks.
-* Compute layer: Making sure compute resources are secure.
+* **Compute layer**: Making sure compute resources are secure.
     * Secures access to virtual machines.
     * Implement endpoint protection on devices and keep systems patched and current.
-* Application layer: 
+* **Application layer**: 
     * Ensure that applications are secure and free of vulnerabilities.
     * Store sensitive application secrets in a secure storage medium.
     * Make security a design requirement for all application development.
-* Data layer: Controls access to business and customer data that you need to protect. Often, regulatory requirements dictate the controls and processes that must be in place to ensure the confidentiality, integrity, and availability of the data. In almost all cases, attackers are after data:
+* **Data layer**: Controls access to business and customer data that you need to protect. Often, regulatory requirements dictate the controls and processes that must be in place to ensure the confidentiality, integrity, and availability of the data. In almost all cases, attackers are after data:
     * Stored in a database.
     * Stored on disk inside virtual machines.
     * Stored in software as a service (SaaS) applications, such as Office 365.
     * Managed through cloud storage.
 
-**Microsoft Defender for Cloud**
+### Microsoft Defender for Cloud
 * A monitoring tool for security posture management and threat protection. It monitors cloud, on-premises, hybrid, and multi-cloud environments to provide guidance and notifications aimed at strengthening your security posture.
 * An Azure-native service which already monitors and protect Azure services without deployment.
 * Deploys a Log Analytics agent to gather security-related data. This is direct on Azure. For hybrid and multi-cloud, Microsoft Defender plans are extended to non Azure machines with the help of Azure Arc. Cloud security posture management (CSPM) features are extended to multi-cloud machines without the need for any agents.
-* Azure-native protections:
+* **Azure-native protections**:
     * Azure PaaS services: Detect threats targeting Azure services. You can also perform anomaly detection on your Azure activity logs using the native integration with Microsoft Defender for Cloud Apps (formerly known as Microsoft Cloud App Security).
     * Azure data services: Help you automatically classify your data in Azure SQL. You can also get assessments for potential vulnerabilities across Azure SQL and Storage services, and recommendations for how to mitigate them.
     * Networks: Helps limit exposure to brute force attacks. By reducing access to VM ports, using the just-in-time VM access, you can harden your network by preventing unnecessary access. You can set secure access policies on selected ports, for only authorized users, allowed source IP address ranges or IP addresses, and for a limited amount of time.
@@ -179,3 +180,5 @@
         * Securing the management ports of your VMs with just-in-time access. 
         * Adaptive application controls to create allowlists for what apps should and shouldn't run on your machines.
 
+### Summary
+In this module, you learned about Azure identity, access, and security services and tools. You covered authentication methods, including which ones are more secure. You learned about restricting access based on a role to help create a more secure environment. And, you learned about the Defense In Depth and Zero Trust models.
