@@ -1,36 +1,37 @@
 ## Microsoft Azure Fundamentals: Describe Azure architecture and services
 
-**What is Microsoft Azure?**
+### What is Microsoft Azure?
 - Microsoft's cloud computing platform with an ever-expanding set of cloud services to help build business solutions.
 
 **What does Azure offer?**
-- Bring ideas to life: Build intelligent apps and solutions
-- Seamlessly unify: manage all infrastructure, data, analytics, and AI solutions on an integrated platform.
-- Innovate on trust: deliver innovations efficiently and securely on a trusted cloud.
+- **Bring ideas to life**: Build intelligent apps and solutions
+- **Seamlessly unify**: manage all infrastructure, data, analytics, and AI solutions on an integrated platform.
+- **Innovate on trust**: deliver innovations efficiently and securely on a trusted cloud.
 
-**Azure Accounts**
-
+### Get started with Azure Accounts
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/account-scope-levels.png)
 * The additional resources/subscriptions help billing management.
 * Multiple subscriptions can be organised into invoice sections, where each section is a line item on the invoice that shows incurred charges for that month.
 * You can also setup multiple invoices on the same billing account using billing profiles, where each profile has its own invoice and payment method.
 
-The Azure free account includes:
+The **Azure free account** includes:
 - Free access to popular Azure products for 12 months.
 - A credit to use for the first 30 days.
 - Access to more than 25 products that are always free.
 
-The Azure free student account includes: 
+The **Azure free student account** includes: 
 - Free access to certain Azure services for 12 months.
 - A credit to use in the first 12 months.
 - Free access to certain software developer tools.
 
 Plus: 24x7 documentation, support and new services demo videos.
 
-**Core architectural components of Azure**
+The **Microsoft Learn sandbox** is a temporary subscription allows you to create Azure resources during a Learn module. Learn automatically cleans up the temporary resources for you after you've completed the module.
+
+### Azure physical infrastructure
 - 2 groups:
-    - Physical Infrastructure: Datacenters which are grouped into Azure Regions or Azure Availability Zones
-    - Management Infrastructure.
+    - **Physical Infrastructure**: Datacenters which are grouped into Azure Regions or Azure Availability Zones
+    - **Management Infrastructure**.
 
 **Azure Regions** 
 - Geographical area with at least one or multiple datacenters that are nearby and networked together with a low-latency network. 
@@ -38,11 +39,13 @@ Plus: 24x7 documentation, support and new services demo videos.
 - There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure Traffic Manager, and Azure DNS.
 
 **Azure Availability Zones** 
+
 - These are physically separate datacenters within an Azure region, minimum 3 such zones in a region. Each availability zone is: 
     * Made up of one or more datacenters equipped with independent power, cooling, and networking.
     * Set up to be an isolation boundary.
     * Connected through high-speed, private fiber-optic networks.
     * **Note**: Not all Azure Regions currently support availability zones.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/availability-zones.png)
 - Used to run mission-critical applications and build high-availability into your application architecture by co-locating your compute, storage, networking, and data resources within an availability zone and replicating in other availability zones. 
 - Keep in mind that there could be a cost to duplicating your services and transferring data between availability zones.
 - Primarily for VMs, managed disks, load balancers, and SQL databases. 
@@ -55,6 +58,7 @@ Plus: 24x7 documentation, support and new services demo videos.
 **Region pairs**
 - Most Azure regions are paired with another region within the same geography at least 300 miles away. This helps to reduce the likelihood of events that impact an entire region.
 - Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate to another enabled region. In these scenarios, recovery and replication must be configured by the customer.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/region-pairs.png)
 - Advantages of region pairs:
     * If an extensive Azure outage occurs, one region out of every pair is prioritized to make sure at least one is restored as quickly as possible for applications hosted in that region pair.
     * Planned Azure updates are rolled out to paired regions one region at a time to minimize downtime and risk of application outage.
@@ -68,7 +72,7 @@ Plus: 24x7 documentation, support and new services demo videos.
     * US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
     * China East, China North, and more: These regions are available through a unique partnership between Microsoft and 21Vianet, whereby Microsoft doesn't directly maintain the datacenters.
 
-**Azure Management Infrastructure**
+### Azure Management Infrastructure
 - Includes Azure resources and resource groups, subscriptions, and accounts.
 
 **Azure resources and resource groups**
@@ -76,6 +80,7 @@ Plus: 24x7 documentation, support and new services demo videos.
 - Resource groups: A group of resources. Each resource must be associated with one resource group and one group only, they can be moved to different resource groups but the former group(s) are no longer associated once moved.
 - Resource groups cannot be nested.
 - An action to a resource group affects all resources in the group. Hence this is something important to take note of when provisioning resources.
+![alt text](https://github.com/viviensiu/Azure/blob/main/images/resource-group.png)
 
 **Azure subscriptions**
 - A unit of management, billing, and scale.
@@ -108,3 +113,6 @@ Plus: 24x7 documentation, support and new services demo videos.
     * 10,000 management groups can be supported in a single directory.
     * A management group tree can support up to six levels of depth. This limit doesn't include the root level or the subscription level.
     * Each management group and subscription can support only one parent.
+
+### Summary
+In this module, you learned about the physical and management structure of Microsoft Azure. You were introduced to the relationship between datacenters, availability zones, and regions. You explored how the infrastructure supports the benefits of the cloud, such as high availability and reliability. You also learned about the management infrastructure of Azure. You explored how resources and resource groups are related, and how subscriptions and management groups can help manage resources.
