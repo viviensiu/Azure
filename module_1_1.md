@@ -61,8 +61,7 @@
 | Applications can be quickly provisioned and deprovisioned | Data is not collocated with other organizations’ data | Organizations determine where to run their applications |
 | Organizations pay only for what they use | Hardware must be purchased for startup and maintenance | Organizations control security, compliance, or legal requirements |
 | Organizations don’t have complete control over resources and security | Organizations are responsible for hardware maintenance and updates | N/A |
-* **Other Cloud models**
-    - Multi-cloud: multiple cloud providers
+* **Multi-cloud**: multiple cloud providers
 * **Azure Arc**: Manages private/public/hybrid/multi-cloud environments.
 * **Azure VMware Solution**: allows redeploy, extend and run VMWare workloads that was established in private cloud when the private cloud is migrated to in public cloud (Azure).
 
@@ -75,9 +74,7 @@
     - No need to purchase and manage costly infrastructure that users might not use to its fullest potential.
     - The ability to pay for more resources when they're needed.
     - The ability to stop paying for resources that are no longer needed.
-
-### Compare cloud pricing models
-* Pay-as-you-go pricing model: Typically pay only for the cloud services you use, which helps you:
+* **Cloud pricing models** uses **Pay-as-you-go pricing model**: Typically pay only for the cloud services you use, which helps you:
     - Plan and manage your operating costs.
     - Run your infrastructure more efficiently.
     - Scale as your business needs change.

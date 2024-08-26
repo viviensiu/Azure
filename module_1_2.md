@@ -37,18 +37,19 @@ When building or deploying a cloud application, two of the biggest consideration
     - **Cost predictability** : Predicting or forecasting the cost of the cloud spend. You can track your real-time resource usage, monitoring resources to ensure efficient usage, and apply data analytics to find patterns and trends that help better plan resource deployments. Tools like the Total Cost of Ownership (TCO) or Pricing Calculator helps to estimate potential cloud spend.
 - Both are heavily influenced by the Microsoft Azure Well-Architected Framework.
 
-**Governance and Compliance**
+### Governance and Compliance in the cloud
 - Setting templates help ensure that all your deployed resources meet corporate standards and government regulatory requirements.
 - You can update all your deployed resources to new standards as standards change.
 - Auditing: flag any resource that’s out of compliance with your corporate standards and provides mitigation strategies.
 - Software patches and updates.
 
-**Security**
+### Security in the cloud
 - IaaS (Maximum security): You're in control of manage the operating systems and installed software, including patches and maintenance.
 - PaaS: Patches and maintenance taken care of automatically.
 - Because the cloud is intended as an over-the-internet delivery of IT resources, cloud providers are typically well suited to handle things like distributed denial of service (DDoS) attacks, making your network more robust and secure.
 
-**Management of the cloud** implies managing your cloud resources. 
+### Management of the cloud
+- Implies managing your cloud resources. 
 - Automatically scale resource deployment based on need.
 - Deploy resources based on a preconfigured template, removing the need for manual configuration.
 - - Monitor the health of resources and automatically replace failing resources.
