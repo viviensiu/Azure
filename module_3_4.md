@@ -51,3 +51,6 @@
     * AJAX calls from web pages, including rates, response times, and failure rates
     * User and session counts.
     * Performance counters from Windows or Linux server machines, such as CPU, memory, and network usage.
+
+### Summary
+In this module, you were introduced to tools that help you monitor your environment and applications, both in Azure and in on-premises or multicloud environments.

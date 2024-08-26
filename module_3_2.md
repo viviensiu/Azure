@@ -56,3 +56,6 @@
     * **My Library**: Lets you save (or pin) documents to quickly access them on your My Library page. Can also set up notifications when documents in your My Library are updated.
     * **All Documents**: Single landing place for documents on the service trust portal. From All Documents, you can pin documents to have them show up in your My Library.
 * **NOTE**: Service Trust Portal reports and documents are available to download for at least 12 months after publishing or until a new version of document becomes available.
+
+### Summary 
+In this module, you learned about some of the features and tools you can use to help with governance of your Azure environment. You also learned about tools you can use to help keep resources in compliance with corporate or regulatory requirements.

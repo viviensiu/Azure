@@ -61,3 +61,6 @@
 | Environment | An environment name, such as "Prod," "Dev," or "Test." |
 | Impact | How important the resource is to business operations, such as "Mission-critical," "High-impact," or "Low-impact." |
 * **NOTE**: Tags are optional on resources.
+
+### Summary
+In this module, you learned about factors that impact costs in Azure and tools to help you both predict potential costs and monitor and control costs.

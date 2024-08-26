@@ -81,3 +81,6 @@
     * **Repeatable results**: Repeatedly deploy your infrastructure throughout the development lifecycle in a consistent manner. Bicep files are idempotent, which means you can deploy the same file many times and get the same resource types in the same state. You can develop one file that represents the desired state, rather than developing lots of separate files to represent updates.
     * **Orchestration**: ARM orchestrates the deployment of interdependent resources so they're created in the correct order. When possible, Resource Manager deploys resources in parallel. You deploy the file through one command instead of through multiple imperative commands.
     * **Modularity**: You can break your Bicep code into manageable parts by using modules. The module deploys a set of related resources. Modules enable you to reuse code and simplify development. Add the module to a Bicep file anytime you need to deploy those resources. 
+
+### Summary
+In this module, you were introduced to features and tools for managing and deploying Azure resources. You learned about the Azure portal (a graphic interface for managing Azure resources), command line, and scripting tools that help deploy or configure resources. You also learned about Azure services that help you manage your on-premises and multicloud environment from Azure.
