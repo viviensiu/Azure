@@ -1,16 +1,16 @@
 ## Describe cloud concepts (25–30%)
 ### Describe cloud computing
-* Define cloud computing
+* Define cloud computing :white_check_mark:
 
-* Describe the shared responsibility model
+* Describe the shared responsibility model :white_check_mark:
 
 * Define cloud models, including public, private, and hybrid
 
 * Identify appropriate use cases for each cloud model
 
-* Describe the consumption-based model
+* Describe the consumption-based model :white_check_mark:
 
-* Compare cloud pricing models
+* Compare cloud pricing models :white_check_mark:
 
 * Describe serverless
 
@@ -24,13 +24,13 @@
 * Describe the benefits of manageability in the cloud
 
 ### Describe cloud service types
-* Describe infrastructure as a service (IaaS)
+* Describe infrastructure as a service (IaaS) :white_check_mark:
 
-* Describe platform as a service (PaaS)
+* Describe platform as a service (PaaS) :white_check_mark:
 
-* Describe software as a service (SaaS)
+* Describe software as a service (SaaS) :white_check_mark:
 
-* Identify appropriate use cases for each cloud service type (IaaS, PaaS, and SaaS)
+* Identify appropriate use cases for each cloud service type (IaaS, PaaS, and SaaS) :white_check_mark:
 
 ## Describe Azure architecture and services (35–40%)
 ### Describe the core architectural components of Azure
