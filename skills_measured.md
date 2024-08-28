@@ -4,9 +4,9 @@
 
 * Describe the shared responsibility model :white_check_mark:
 
-* Define cloud models, including public, private, and hybrid
+* Define cloud models, including public, private, and hybrid :white_check_mark:
 
-* Identify appropriate use cases for each cloud model
+* Identify appropriate use cases for each cloud model :white_check_mark:
 
 * Describe the consumption-based model :white_check_mark:
 
@@ -17,7 +17,7 @@
 ### Describe the benefits of using cloud services
 * Describe the benefits of high availability and scalability in the cloud
 
-* Describe the benefits of reliability and predictability in the cloud
+* Describe the benefits of reliability and predictability in the cloud :white_check_mark:
 
 * Describe the benefits of security and governance in the cloud
 
