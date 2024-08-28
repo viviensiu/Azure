@@ -45,6 +45,7 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
     * Set up to be an isolation boundary.
     * Connected through high-speed, private fiber-optic networks.
     * **Note**: Not all Azure Regions currently support availability zones.
+
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/availability-zones.png)
 - Used to run mission-critical applications and build high-availability into your application architecture by co-locating your compute, storage, networking, and data resources within an availability zone and replicating in other availability zones. 
 - Keep in mind that there could be a cost to duplicating your services and transferring data between availability zones.
