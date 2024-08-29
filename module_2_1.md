@@ -3,10 +3,10 @@
 ### What is Microsoft Azure?
 - Microsoft's cloud computing platform with an ever-expanding set of cloud services to help build business solutions.
 
-**What does Azure offer?**
-- **Bring ideas to life**: Build intelligent apps and solutions
-- **Seamlessly unify**: manage all infrastructure, data, analytics, and AI solutions on an integrated platform.
-- **Innovate on trust**: deliver innovations efficiently and securely on a trusted cloud.
+- **What does Azure offer?**
+    - **Bring ideas to life**: Build intelligent apps and solutions
+    - **Seamlessly unify**: manage all infrastructure, data, analytics, and AI solutions on an integrated platform.
+    - **Innovate on trust**: deliver innovations efficiently and securely on a trusted cloud.
 
 ### Get started with Azure Accounts
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/account-scope-levels.png)
@@ -14,32 +14,31 @@
 * Multiple subscriptions can be organised into invoice sections, where each section is a line item on the invoice that shows incurred charges for that month.
 * You can also setup multiple invoices on the same billing account using billing profiles, where each profile has its own invoice and payment method.
 
-The **Azure free account** includes:
-- Free access to popular Azure products for 12 months.
-- A credit to use for the first 30 days.
-- Access to more than 25 products that are always free.
+- The **Azure free account** includes:
+    - Free access to popular Azure products for 12 months.
+    - A credit to use for the first 30 days.
+    - Access to more than 25 products that are always free.
 
-The **Azure free student account** includes: 
-- Free access to certain Azure services for 12 months.
-- A credit to use in the first 12 months.
-- Free access to certain software developer tools.
+- The **Azure free student account** includes: 
+    - Free access to certain Azure services for 12 months.
+    - A credit to use in the first 12 months.
+    - Free access to certain software developer tools.
 
-Plus: 24x7 documentation, support and new services demo videos.
+- Plus: 24x7 documentation, support and new services demo videos.
 
-The **Microsoft Learn sandbox** is a temporary subscription allows you to create Azure resources during a Learn module. Learn automatically cleans up the temporary resources for you after you've completed the module.
+- The **Microsoft Learn sandbox** is a temporary subscription allows you to create Azure resources during a Learn module. Learn automatically cleans up the temporary resources for you after you've completed the module.
 
 ### Azure physical infrastructure
 - 2 groups:
     - **Physical Infrastructure**: Datacenters which are grouped into Azure Regions or Azure Availability Zones
     - **Management Infrastructure**.
 
-**Azure Regions** 
+### Azure Regions
 - Geographical area with at least one or multiple datacenters that are nearby and networked together with a low-latency network. 
 - Some services or virtual machine (VM) features are only available in certain regions, such as specific VM sizes or storage types. 
 - There are also some global Azure services that don't require you to select a particular region, such as Microsoft Entra ID, Azure Traffic Manager, and Azure DNS.
 
-**Azure Availability Zones** 
-
+### Azure Availability Zones
 - These are physically separate datacenters within an Azure region, minimum 3 such zones in a region. Each availability zone is: 
     * Made up of one or more datacenters equipped with independent power, cooling, and networking.
     * Set up to be an isolation boundary.
@@ -56,7 +55,7 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
     * **Non-regional services**: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
 -  It’s possible that an event could be so large that it impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
 
-**Region pairs**
+### Region pairs
 - Most Azure regions are paired with another region within the same geography at least 300 miles away. This helps to reduce the likelihood of events that impact an entire region.
 - Not all Azure services automatically replicate data or automatically fall back from a failed region to cross-replicate to another enabled region. In these scenarios, recovery and replication must be configured by the customer.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/region-pairs.png)
@@ -67,7 +66,7 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
 - Most regions are paired in two-directions (they backup each other).
 - However, some regions, such as West India and Brazil South, are paired in only one direction. In a one-direction pairing, the Primary region does not provide backup for its secondary region. So, even though West India’s secondary region is South India, South India does not rely on West India. West India's secondary region is South India, but South India's secondary region is Central India. Brazil South is unique because it's paired with a region outside of its geography. Brazil South's secondary region is South Central US. The secondary region of South Central US isn't Brazil South.
 
-**Sovereign Regions**
+### Sovereign Regions
 - Instances of Azure that are isolated from the main instance of Azure. For compliance or legal purposes.
 - Examples:
     * US DoD Central, US Gov Virginia, US Gov Iowa and more: These regions are physical and logical network-isolated instances of Azure for U.S. government agencies and partners. These datacenters are operated by screened U.S. personnel and include additional compliance certifications.
@@ -76,14 +75,14 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
 ### Azure Management Infrastructure
 - Includes Azure resources and resource groups, subscriptions, and accounts.
 
-**Azure resources and resource groups**
+### Azure resources and resource groups
 - Resource: Basic building block of Azure. 
 - Resource groups: A group of resources. Each resource must be associated with one resource group and one group only, they can be moved to different resource groups but the former group(s) are no longer associated once moved.
 - Resource groups cannot be nested.
 - An action to a resource group affects all resources in the group. Hence this is something important to take note of when provisioning resources.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/resource-group.png)
 
-**Azure subscriptions**
+### Azure subscriptions
 - A unit of management, billing, and scale.
 - Subscriptions allow you to logically organize your resource groups and facilitate billing.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/subscriptions.png)
@@ -101,13 +100,12 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
     * Organizational structures: You can create subscriptions to reflect different organizational structures. 
     * Billing: You can create additional subscriptions for billing purposes, because costs are first aggregated at the subscription level.
 
-**Azure management groups**
+### Azure management groups
 - Azure management groups provide a level of scope above subscriptions. 
 - You organize subscriptions into management groups and apply governance conditions to these groups. All subscriptions within a management group automatically inherit the conditions applied to the management group, the same way that resource groups inherit settings from subscriptions and resources inherit from resource groups.
 
-**Management group, subscriptions, and resource group hierarchy**
+**Examples of Management group, subscriptions, and resource group hierarchy**
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/management-groups-subscriptions.png)
-- Examples:
     * Create a hierarchy that applies a policy. You could limit VM locations to the US West Region in a group called Production. This policy will inherit onto all the subscriptions that are descendants of that management group and will apply to all VMs under those subscriptions. This security policy can't be altered by the resource or subscription owner, which allows for improved governance.
     * Provide user access to multiple subscriptions. By moving multiple subscriptions under a management group, you can create one Azure role-based access control (Azure RBAC) assignment on the management group. Assigning Azure RBAC at the management group level means that all sub-management groups, subscriptions, resource groups, and resources underneath that management group would also inherit those permissions. One assignment on the management group can enable users to have access to everything they need instead of scripting Azure RBAC over different subscriptions.
 - Important notes about management group:
