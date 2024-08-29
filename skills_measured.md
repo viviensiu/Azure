@@ -34,9 +34,9 @@
 
 ## Describe Azure architecture and services (35–40%)
 ### Describe the core architectural components of Azure
-* Describe Azure regions, region pairs, and sovereign regions
+* Describe Azure regions, region pairs, and sovereign regions :white_check_mark:
 
-* Describe availability zones
+* Describe availability zones :white_check_mark:
 
 * Describe Azure datacenters
 
