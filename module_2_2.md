@@ -9,8 +9,8 @@
 * An image is a template used to create a VM and may already include an OS and other software, like development tools or web hosting environments.
 * You can even create or use an already created image to rapidly provision VMs.
 
-**Scale VMs in Azure**
-* Azure can manage the grouping of VMs for you with features such as scale sets and availability sets.
+* Scale VMs in Azure
+    * Azure can manage the grouping of VMs for you with features such as scale sets and availability sets.
 * **Virtual machine scale sets**: 
     * Create and manage a group of identical, load-balanced VMs.
     * Scale sets allow you to centrally manage, configure, and update a large number of VMs in minutes.
@@ -23,19 +23,19 @@
     * Fault domain: groups VMs by common power source and network switch. By default, an availability set will split your VMs across up to 3 fault domains. This helps protect against a physical power or networking failure by having VMs in different fault domains.
     * No additional cost for configuring an availability set.
 
-**Examples of when to use VMs**
-* During testing and development.
-* When running applications in the cloud.
-* When extending your datacenter to the cloud.
-* During disaster recovery.
+* **Examples of when to use VMs**
+    * During testing and development.
+    * When running applications in the cloud.
+    * When extending your datacenter to the cloud.
+    * During disaster recovery.
 
-**Move to the cloud with VMs**
-* lift and shift by creating an image of the physical server and host it within the VM.
+* **Move to the cloud with VMs**
+    * lift and shift by creating an image of the physical server and host it within the VM.
 
-**VM Resources**
-* Size (purpose, number of processor cores, and amount of RAM)
-* Storage disks (hard disk drives, solid state drives, etc.)
-* Networking (virtual network, public IP address, and port configuration)
+* **VM Resources**
+    * Size (purpose, number of processor cores, and amount of RAM)
+    * Storage disks (hard disk drives, solid state drives, etc.)
+    * Networking (virtual network, public IP address, and port configuration)
 
 ### Azure Virtual Desktop
 * Desktop and application virtualization service that runs on the cloud. It enables you to use a cloud-hosted version of Windows from any location.
@@ -99,40 +99,40 @@
     * Public endpoints have a public IP address and can be accessed from anywhere in the world.
     * Private endpoints exist within a virtual network and have a private IP address from within the address space of that virtual network.
 
-**Network Isolation and Segmentation**
+### Network Isolation and Segmentation
 * Can create multiple isolated virtual networks.
 * Setup: Define a private IP address space by using either public or private IP address ranges. The IP range only exists within the (isolated) virtual network and isn't internet routable. 
 * The IP address space can be divided into subnets, each named subnet gets allocated part of the defined address space.
 * Name resolution: use name resolution service built into Azure.
 * Can use internal or an external DNS server.
 
-**Internet communications**
+### Internet communications
 * Enable incoming connections from the internet by: 
     * Public IP address to an Azure resource, 
     * Public load balancer before the resource.
 
-**Communicate between Azure resources**
+### Communicate between Azure resources
 * 2 ways:
     * Virtual networks: For VMs and Azure resources, such as the App Service Environment for Power Apps, Azure Kubernetes Service, and Azure virtual machine scale sets.
     * Service endpoints: For Azure resource types such as Azure SQL databases and storage accounts. This approach enables you to link multiple Azure resources to virtual networks to improve security and provide optimal routing between resources.
 
-**Communicate with on-premises resources**
+### Communicate with on-premises resources
 * 3 ways to create a network that spans both your local and cloud environments:
     * Point-to-site VPN connections: From a computer outside your organization back into your corporate network. In this case, the client computer initiates an encrypted VPN connection to connect to the Azure virtual network.
     * Site-to-site VPN: Link your on-premises VPN device or gateway to the Azure VPN gateway in a virtual network. In effect, the devices in Azure can appear as being on the local network. The connection is encrypted and works over the internet.
     * Azure ExpressRoute: Dedicated private connectivity to Azure that doesn't travel over the internet. ExpressRoute is useful for environments where you need greater bandwidth and even higher levels of security.
 
-**Route network traffic**
+### Route network traffic
 * Default: Routes traffic between subnets on any connected virtual networks, on-premises networks, and the internet.
 * Custom control for routing:
     * Route tables: Define rules about how traffic should be directed. You can create custom route tables that control how packets are routed between subnets.
     * Border Gateway Protocol (BGP) works with Azure VPN gateways, Azure Route Server, or Azure ExpressRoute to propagate on-premises BGP routes to Azure virtual networks.
 
-**Filter network traffic**
+### Filter network traffic
 * Network security groups: Azure resources that can contain multiple inbound and outbound security rules.
 * Network virtual appliances: Specialized VMs that can be compared to a hardened network appliance. Carries out a particular network function, such as running a firewall or performing wide area network (WAN) optimization.
 
-**Virtual Network Peering** 
+### Virtual Network Peering
 * Allows two virtual networks to connect directly to each other. 
 * Network traffic between peered networks is private, and travels on the Microsoft backbone network, never entering the public internet. 
 * Enables resources in each virtual network to communicate with each other.
@@ -141,10 +141,8 @@
 ### Virtual private network (VPN)
 * Uses an encrypted tunnel within another network.
 * Connect two or more trusted private networks to one another over an untrusted network (typically the public internet).
-* Traffic is encrypted when travel over untrusted network.
-
-**Azure VPN Gateway** 
-* Azure VPN Gateway instances are deployed in a dedicated subnet of the virtual network and enable the following connectivity:
+* Traffic is encrypted when travel over untrusted network. 
+* **Azure VPN Gateway** instances are deployed in a dedicated subnet of the virtual network and enable the following connectivity:
     * Connect on-premises datacenters to virtual networks through a site-to-site connection.
     * Connect individual devices to virtual networks through a point-to-site connection.
     * Connect virtual networks to other virtual networks through a network-to-network connection.
@@ -159,7 +157,7 @@
     * Coexistence with an **Azure ExpressRoute** gateway
 * Method of authentication: Preshared key.
 
-**High-availability Scenarios**
+### High-availability Scenarios
 * A few ways to maximize the resiliency of your VPN gateway:
     * **Active/standby**: By default, VPN gateways are deployed as two instances in an active/standby configuration. When connections to active instance are interrupted, the failover to standby gateway will take a few seconds (for planned maintenance) or within 90s (for unplanned interruptions).
     * **Active/active**: Assign a unique public IP address to each instance, and create separate tunnels from the on-premises device to each IP address.
@@ -182,16 +180,15 @@
 * **Dynamic routing via Border Gateway Protocol (BGP)**: Exchange routes between on-premises networks and resources running in Azure.
 * **Built-in redundancy**: Each connectivity provider uses redundant devices to ensure that connections established with Microsoft are highly available. 
 
-**ExpressRoute connectivity models**
+### ExpressRoute connectivity models
 * 4 models to connect your on-premises network to the Microsoft cloud:
     * **CloudExchange colocation**: Applies to facilities that're physically colocated at a cloud exchange, where you can request a virtual cross-connect to the Microsoft cloud.
     * **Point-to-point Ethernet connection**: Point-to-point connection to connect your facility to the Microsoft cloud.
     * **Any-to-any connection**: Integrate your wide area network (WAN) with Azure by providing connections to your offices and datacenters.
     * **Directly from ExpressRoute sites**: Connect directly into the Microsoft's global network at a peering location. ExpressRoute Direct provides dual 100 Gbps or 10-Gbps connectivity, which supports Active/Active connectivity at scale.
-
-**Security considerations**
-* ExpressRoute is a private connection from your on-premises infrastructure to your Azure infrastructure.
-* Even if you have an ExpressRoute connection, DNS queries, certificate revocation list checking, and Azure Content Delivery Network requests are still sent over the public internet.
+* **Security considerations**
+    * ExpressRoute is a private connection from your on-premises infrastructure to your Azure infrastructure.
+    * Even if you have an ExpressRoute connection, DNS queries, certificate revocation list checking, and Azure Content Delivery Network requests are still sent over the public internet.
 
 ### Azure DNS 
 * Hosting service for DNS domains that provides name resolution by using Microsoft Azure infrastructure.
