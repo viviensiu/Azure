@@ -104,7 +104,8 @@
 - Azure management groups provide a level of scope above subscriptions. 
 - You organize subscriptions into management groups and apply governance conditions to these groups. All subscriptions within a management group automatically inherit the conditions applied to the management group, the same way that resource groups inherit settings from subscriptions and resources inherit from resource groups.
 
-**Examples of Management group, subscriptions, and resource group hierarchy**
+- **Examples of Management group, subscriptions, and resource group hierarchy**
+
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/management-groups-subscriptions.png)
 
     - Create a hierarchy that applies a policy. You could limit VM locations to the US West Region in a group called Production. This policy will inherit onto all the subscriptions that are descendants of that management group and will apply to all VMs under those subscriptions. This security policy can't be altered by the resource or subscription owner, which allows for improved governance.
