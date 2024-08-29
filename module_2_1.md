@@ -51,9 +51,9 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
 - Keep in mind that there could be a cost to duplicating your services and transferring data between availability zones.
 - Primarily for VMs, managed disks, load balancers, and SQL databases. 
 - Azure services that support availability zones fall into 3 categories:
-    * Zonal services: You pin the resource to a specific zone (for example, VMs, managed disks, IP addresses).
-    * Zone-redundant services: The platform replicates automatically across zones (for example, zone-redundant storage, SQL Database).
-    * Non-regional services: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
+    * **Zonal services**: You pin the resource to a specific zone (for example, VMs, managed disks, IP addresses).
+    * **Zone-redundant services**: The platform replicates automatically across zones (for example, zone-redundant storage, SQL Database).
+    * **Non-regional services**: Services are always available from Azure geographies and are resilient to zone-wide outages as well as region-wide outages.
 -  It’s possible that an event could be so large that it impacts multiple availability zones in a single region. To provide even further resilience, Azure has Region Pairs.
 
 **Region pairs**
@@ -94,8 +94,8 @@ The **Microsoft Learn sandbox** is a temporary subscription allows you to create
     * Apply different access-management policies. 
     * Define boundaries around Azure products, services, and resources.
 - 2 types of subscription boundaries:
-    * Billing boundary: This subscription type determines how an Azure account is billed for using Azure. Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs.
-    * Access control boundary: Azure applies access-management policies at the subscription level, and you can create separate subscriptions to reflect different organizational structures. An example is that within a business, you have different departments to which you apply distinct Azure subscription policies. This billing model allows you to manage and control access to the resources that users provision with specific subscriptions.
+    * **Billing boundary**: This subscription type determines how an Azure account is billed for using Azure. Azure generates separate billing reports and invoices for each subscription so that you can organize and manage costs.
+    * **Access control boundary**: Azure applies access-management policies at the subscription level, and you can create separate subscriptions to reflect different organizational structures. An example is that within a business, you have different departments to which you apply distinct Azure subscription policies. This billing model allows you to manage and control access to the resources that users provision with specific subscriptions.
 - You can create additional subscriptions to separate:
     * Environments: e.g. dev, testing and production env.
     * Organizational structures: You can create subscriptions to reflect different organizational structures. 
