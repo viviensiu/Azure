@@ -40,9 +40,9 @@
 
 * Describe Azure datacenters
 
-* Describe Azure resources and resource groups
+* Describe Azure resources and resource groups :white_check_mark:
 
-* Describe subscriptions
+* Describe subscriptions :white_check_mark:
 
 * Describe management groups
 
