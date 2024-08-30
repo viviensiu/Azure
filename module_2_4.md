@@ -3,7 +3,7 @@
 ### Azure directory services
 * Microsoft Entra ID and Microsoft Entra Domain Services.
 
-**Microsoft Entra ID**
+### Microsoft Entra ID
 * Microsoft Entra ID: Cloud-based identity and access management (IAM) service.
 * Active Directory: On-premise Window server's identity and access management (IAM) service.
 * Could also help to maintain your on-premises Active Directory deployment. This works by connecting Active Directory with Microsoft Entra ID, and Microsoft helps to detect suspicious sign-in attempts, e.g. from unknown locations or devices at no extra cost (AD doesn't monitor sign-in attempts).
@@ -20,7 +20,7 @@
     * Application management: Manage your cloud and on-premises apps. Features like Application Proxy, SaaS apps, the My Apps portal, and single sign-on provide a better user experience.
     * Device management: Supports the registration of devices. Registration enables devices to be managed through tools like Microsoft Intune. It also allows for device-based Conditional Access policies to restrict access attempts to only those coming from known devices, regardless of the requesting user account.
 
-**Microsoft Entra Domain Services**
+### Microsoft Entra Domain Services
 * A service that provides managed domain services such as domain join, group policy, lightweight directory access protocol (LDAP), and Kerberos/NTLM authentication. 
 * Benefit of domain services without the need to deploy, manage, and patch domain controllers (DCs) in the cloud.
 * Why do you need this? To run legacy applications in the cloud that can't use modern authentication methods, or where you don't want directory lookups to always go back to an on-premises AD DS environment. 
@@ -37,7 +37,7 @@
 * Security v.s. Convenience:
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/passwordless-convenience-security.png)
 
-**Single Sign-On (SSO)**
+### Single Sign-On (SSO)
 * Enables a user to sign in one time and use that credential to access multiple resources and applications from different providers, where these providers must trust the initial authenticator.
 * **Note**: SSO is only as secure as the initial authenticator because the subsequent connections are all based on the security of the initial authenticator.
 * Benefits:
@@ -45,7 +45,7 @@
     * Easier for users to manage their identities.
     * Easier for IT to manage users: account lockouts, password reset requests, disabling user identities.
 
-**Multifactor authentication** 
+### Multifactor authentication
 * Process of prompting a user for an extra form (or factor) of identification during the sign-in process.
 * Additional security for your identities by requiring two or more elements to fully authenticate, elements such as:
     * Something the user knows – this might be a challenge question.
@@ -53,7 +53,7 @@
     * Something the user is – this is typically some sort of biometric property, such as a fingerprint or face scan.
 * Microsoft Entra multifactor authentication: Enables users to choose an additional form of authentication during sign-in, such as a phone call or mobile app notification.
 
-**Passwordless authentication** 
+### Passwordless authentication 
 * Password is removed and replaced with something you have (e.g. your computer), plus something you are, or something you know.
 * Needs to be set up on a device before it can work. Once enrolled, you can be authenticated without using a password by providing something you know or are (such as a PIN or fingerprint).
 * Microsoft global Azure and Azure Government offer 3 passwordless authentication options that integrate with Microsoft Entra ID:
@@ -62,8 +62,8 @@
     * **FIDO2 (Fast IDentity Online) security keys**: Unphishable standards-based passwordless authentication method that can come in any form factor. Allows sign-in by using an external security key or a platform key built into a device. Users can register and then select a FIDO2 security key at the sign-in interface as their main means of authentication. These FIDO2 security keys are typically USB devices, but could also use Bluetooth or NFC. 
 
 ### Azure External Identities
-**Microsoft Entra External ID** 
-* Ways you can securely interact with users outside of your organization to share your resources with them while you define how your internal users can access external organisations.
+* **Microsoft Entra External ID** 
+    * Ways you can securely interact with users outside of your organization to share your resources with them while you define how your internal users can access external organisations.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/azure-active-directory-external-identities.png)
 * 3 capabilities of External ID (you can use more than one):
     * **Business to business (B2B) collaboration**: Allow external users to use their preferred identity to sign-in to your Microsoft applications or other enterprise applications (SaaS apps, custom-developed apps, etc.). B2B users are represented in your directory, typically as guest users.
@@ -157,8 +157,7 @@
     * Microsoft Defender for Containers extends its container threat detection and advanced defenses to your Amazon EKS Linux clusters.
     * Microsoft Defender for Servers brings threat detection and advanced defenses to your Windows and Linux EC2 instances.
 
-**Assess, Secure, and Defend**
-* 3 vital needs as you manage the security of your resources and workloads in the cloud and on-premises:
+* **Assess, Secure, and Defend**: 3 vital needs as you manage the security of your resources and workloads in the cloud and on-premises:
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/assess-secure-defend.png)
 * Continuously assess:
     * Vulnerability assessment solutions for VMs, container registries, and SQL servers.
@@ -170,15 +169,10 @@
     * The list of recommendations is enabled and supported by the Azure Security Benchmark. This Microsoft-authored, Azure-specific, benchmark provides a set of guidelines for security and compliance best practices based on common compliance frameworks. In this way, Defender for Cloud enables you not just to set security policies, but to apply secure configuration standards across your resources.
     * Defender for Cloud groups the recommendations into security controls and adds a secure score value to each control. The secure score gives you an at-a-glance indicator of the health of your security posture, while the controls give you a working list of things to consider to improve your security score and your overall security posture. ![alt text](https://github.com/viviensiu/Azure/blob/main/images/defender-for-cloud.png)
 * Defend:
-    * Defender for Cloud provides security alert which:
-        * Describe details of the affected resources.
-        * Suggest remediation steps.
-        * Provide, in some cases, an option to trigger a logic app in response.
+    * Defender for Cloud provides security alert which: Describe details of the affected resources. Suggest remediation steps. Provide, in some cases, an option to trigger a logic app in response.
     * Alerts can be exported.
     * Defender for Cloud's threat protection includes fusion kill-chain analysis, which automatically correlates alerts in your environment based on cyber kill-chain analysis, to help you better understand the full story of an attack campaign, where it started, and what kind of impact it had on your resources.
-    * Advanced threat protection:
-        * Securing the management ports of your VMs with just-in-time access. 
-        * Adaptive application controls to create allowlists for what apps should and shouldn't run on your machines.
+    * Advanced threat protection: Securing the management ports of your VMs with just-in-time access. Adaptive application controls to create allowlists for what apps should and shouldn't run on your machines.
 
 ### Summary
 In this module, you learned about Azure identity, access, and security services and tools. You covered authentication methods, including which ones are more secure. You learned about restricting access based on a role to help create a more secure environment. And, you learned about the Defense In Depth and Zero Trust models.
