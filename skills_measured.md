@@ -44,9 +44,9 @@
 
 * Describe subscriptions :white_check_mark:
 
-* Describe management groups
+* Describe management groups :white_check_mark:
 
-* Describe the hierarchy of resource groups, subscriptions, and management groups
+* Describe the hierarchy of resource groups, subscriptions, and management groups :white_check_mark:
 
 ### Describe Azure compute and networking services
 * Compare compute types, including containers, virtual machines, and functions
