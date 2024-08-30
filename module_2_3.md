@@ -21,8 +21,7 @@
     * Geo-zone-redundant storage (GZRS).
     * Read-access geo-zone-redundant storage (RA-GZRS).
 
-**Storage account endpoints**
-* The combination of the storage account name and the Azure Storage service endpoint forms the endpoints for your storage account.
+* **Storage account endpoints**: The combination of the storage account name and the Azure Storage service endpoint forms the endpoints for your storage account.
 * The following table shows the endpoint format for Azure Storage services.
 
 | Storage service | Endpoint |
@@ -40,27 +39,25 @@
     * Whether your data is replicated to a second region that is geographically distant to the primary region, to protect against regional disasters.
     * Whether your application requires read access to the replicated data in the secondary region if the primary region becomes unavailable.
 
-**Redundancy in the primary region**
-* Data is always replicated three times in the primary region.
+* **Redundancy in the primary region**: Data is always replicated three times in the primary region.
 * 2 options on data replication:
     * **Locally Redundant Storage (LRS)**: Lowest cost option, replicate data 3 times in a data center, protects your data against server rack and drive failures, but all data may be lost if disaster struck the data center.
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/locally-redundant-storage.png)
     * **Zone-Redundant Storage (ZRS)**: Replicates data synchronously across 3 Availability Zones in the primary region. If one zone is down, you still have both read and write access to data, no remounting required, and Azure will handle the network updates to point to direct application to the other zones. However, you will need to wait for Azure to complete network updates before you could access the data again. ZRS is recommended for restricting replication of data within a country or region to meet data governance requirements.
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/zone-redundant-storage.png)
 
-**Redundancy in a secondary region**
-* The paired secondary region is based on Azure Region Pairs, and can't be changed.
+* **Redundancy in a secondary region**: The paired secondary region is based on Azure Region Pairs, and can't be changed.
 * By default, data in the secondary region isn't available for read or write access unless there's a failover to the secondary region.
-**Because data is replicated to the secondary region asynchronously, a failure that affects the primary region may result in data loss if the primary region can't be recovered. The interval between the most recent writes to the primary region and the last write to the secondary region is known as the recovery point objective (RPO). The RPO indicates the point in time to which data can be recovered. Azure Storage typically has an RPO of less than 15 minutes, although there's currently no SLA on how long it takes to replicate data to the secondary region.**
+* **Because data is replicated to the secondary region asynchronously, a failure that affects the primary region may result in data loss if the primary region can't be recovered. The interval between the most recent writes to the primary region and the last write to the secondary region is known as the recovery point objective (RPO). The RPO indicates the point in time to which data can be recovered. Azure Storage typically has an RPO of less than 15 minutes, although there's currently no SLA on how long it takes to replicate data to the secondary region.**
 * 2 options:
     * **Geo-redundant storage (GRS)**: Copies your data synchronously 3 times within one location in primary region using LRS. It then copies your data asynchronously to a single location in the secondary region (the region pair) using LRS.
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/geo-redundant-storage.png)
     * **Geo-zone-redundant storage (GZRS)**: Combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across 3 Availability Zones in the primary region (similar to ZRS) and replicated to a secondary geographic region, using LRS, for protection from regional disasters. 
     ![alt text](https://github.com/viviensiu/Azure/blob/main/images/geo-zone-redundant-storage.png)
 
-**Read access to data in the secondary region**
-* Geo-redundant storage (with GRS or GZRS) replicates your data to another physical location in the secondary region to protect against regional outages. However, that data is available to be read only if the customer or Microsoft initiates a failover from the primary to secondary region. 
-* However, if you enable read access to the secondary region, your data is always available, even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
+* **Read access to data in the secondary region**:
+    * Geo-redundant storage (with GRS or GZRS) replicates your data to another physical location in the secondary region to protect against regional outages. However, that data is available to be read only if the customer or Microsoft initiates a failover from the primary to secondary region. 
+    * However, if you enable read access to the secondary region, your data is always available, even when the primary region is running optimally. For read access to the secondary region, enable read-access geo-redundant storage (RA-GRS) or read-access geo-zone-redundant storage (RA-GZRS).
 
 ### Azure storage services
 * Benefits: 
@@ -69,7 +66,7 @@
     * Scalable. 
     * Managed. Azure handles hardware maintenance, updates, and critical issues for you.
     * Accessible from anywhere in the world over HTTP or HTTPS. Microsoft provides client libraries for Azure Storage in a variety of languages. Supports scripting in Azure PowerShell or Azure CLI. Azure portal and Azure Storage Explorer offer easy visual solutions for working with your data.
-**Azure Blobs**
+### Azure Blobs
 * A massively scalable object store for unstructured data (text and binary). 
 * Also includes support for big data analytics through Data Lake Storage Gen2. * One advantage of blob storage over disk storage is that it doesn't require developers to think about or manage disks.
 * Different access tiers for blob storage to manage costs:
@@ -79,7 +76,7 @@
     * Archive access tier: Appropriate for data that is rarely accessed and stored for at least 180 days, with flexible latency requirements (for example, long-term backups). Set at blob level.
 * Access costs increase from Hot access tier to Archive access tier, while storage costs decrease from Hot access tier to Archive access tier.
 
-**Azure Files**
+### Azure Files
 * Managed file shares accessible via the industry standard Server Message Block (SMB) or Network File System (NFS) protocols for cloud or on-premises deployments.
 * SMB Azure file shares: Accessible from Windows, Linux, and macOS clients. Can be cached on Windows Servers with Azure File Sync.
 * NFS Azure Files shares: Accessible from Linux or macOS clients.
@@ -90,16 +87,16 @@
     * Resiliency: Always available.
     * Familiar programmability: Applications running in Azure can access data in the share via file system I/O APIs. Developers can therefore use their existing code and skills to migrate existing applications. In addition to System IO APIs, you can use Azure Storage Client Libraries or the Azure Storage REST API.
 
-**Azure Queues** 
+### Azure Queues 
 * A messaging store for reliable messaging between application components.
 * Used to create a backlog of work to process asynchronously.
 * Can be combined with Azure Functions to take an action when a message is received. 
 
-**Azure Disks** 
+### Azure Disks 
 * Block-level storage volumes for Azure VMs.
 * Conceptually, they’re the same as a physical disk, but they’re virtualized.
 
-**Azure Tables** 
+### Azure Tables
 * NoSQL table option for structured, non-relational data.
 
 ### Azure data migration options
@@ -107,7 +104,7 @@
     * Real-time migration using Azure Migrate.
     * Asynchronous migration using Azure Data Box.
 
-**Azure Migrate**
+### Azure Migrate
 * Helps manage the assessment and migration of on-premises datacenter to Azure cloud. Provides the following:
     * Unified migration platform: A single portal to start, run, and track your migration to Azure.
     * Integrated tools including tools from independent software vendor (ISV).
@@ -120,7 +117,7 @@
     * **Azure App Service migration assistant**: Standalone tool to assess on-premises websites for migration to Azure App Service. Use Migration Assistant to migrate .NET and PHP web apps to Azure.
     * **Azure Data Box**: Move large amounts of offline data to Azure.
 
-**Azure Data Box**
+### Azure Data Box
 * Physical migration service that helps transfer large amounts of data in a quick, inexpensive, and reliable way.
 * To import or export data from Azure. If to import data into Azure, Microsoft automatically uploads the data once they receive it.
 * Maximum usable storage capacity of 80 terabytes.
