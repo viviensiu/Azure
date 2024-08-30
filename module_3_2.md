@@ -12,10 +12,11 @@
     * Unified data governance.
 ![alt text](https://github.com/viviensiu/Azure/blob/main/images/purview-solution-areas.png)
 * **Microsoft Purview risk and compliance solutions**:
-    * Core component: MS 365. Uses M365 services such as Microsoft Teams, OneDrive, and Exchange to help manage and monitor your data. The data monitoring and management helps to:
-        * Protect sensitive data across clouds, apps, and devices.
-        * Identify data risks and manage regulatory compliance requirements.
-        * Get started with regulatory compliance.
+    * Core component: MS 365. Uses M365 services such as Microsoft Teams, OneDrive, and Exchange to help manage and monitor your data. 
+* The data monitoring and management helps to:
+    * Protect sensitive data across clouds, apps, and devices.
+    * Identify data risks and manage regulatory compliance requirements.
+    * Get started with regulatory compliance.
 * **Microsoft Purview unified data governance**: Helps organization to manage data stored in Azure, SQL and Hive databases, locally, and even in other clouds like Amazon S3. It works by:
     * Create an up-to-date map of your entire data estate that includes data classification and end-to-end lineage.
     * Identify where sensitive data is stored in your estate.
