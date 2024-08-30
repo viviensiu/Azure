@@ -113,11 +113,11 @@ Describe application hosting options, including web apps, containers, and virtua
 
 * Describe Azure Cloud Shell, including Azure Command-Line Interface (CLI) and Azure PowerShell
 
-* Describe the purpose of Azure Arc
+* Describe the purpose of Azure Arc :white_check_mark:
 
 * Describe infrastructure as code (IaC)
 
-* Describe Azure Resource Manager (ARM) and ARM templates
+* Describe Azure Resource Manager (ARM) and ARM templates :white_check_mark:
 
 ### Describe monitoring tools in Azure
 * Describe the purpose of Azure Advisor
