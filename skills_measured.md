@@ -51,9 +51,9 @@
 ### Describe Azure compute and networking services
 * Compare compute types, including containers, virtual machines, and functions
 
-* Describe virtual machine options, including Azure virtual machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop
+* Describe virtual machine options, including Azure virtual machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop :white_check_mark:
 
-* Describe the resources required for virtual machines
+* Describe the resources required for virtual machines :white_check_mark:
 
 Describe application hosting options, including web apps, containers, and virtual machines
 
