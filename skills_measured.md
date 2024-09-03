@@ -57,9 +57,9 @@
 
 * Describe application hosting options, including web apps, containers, and virtual machines :white_check_mark:
 
-* Describe virtual networking, including the purpose of Azure virtual networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and ExpressRoute
+* Describe virtual networking, including the purpose of Azure virtual networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and ExpressRoute :white_check_mark:
 
-* Define public and private endpoints
+* Define public and private endpoints :white_check_mark:
 
 ### Describe Azure storage services
 * Compare Azure Storage services
