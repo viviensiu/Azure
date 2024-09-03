@@ -49,13 +49,13 @@
 * Describe the hierarchy of resource groups, subscriptions, and management groups :white_check_mark:
 
 ### Describe Azure compute and networking services
-* Compare compute types, including containers, virtual machines, and functions
+* Compare compute types, including containers, virtual machines, and functions :white_check_mark:
 
 * Describe virtual machine options, including Azure virtual machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop :white_check_mark:
 
 * Describe the resources required for virtual machines :white_check_mark:
 
-Describe application hosting options, including web apps, containers, and virtual machines
+* Describe application hosting options, including web apps, containers, and virtual machines :white_check_mark:
 
 * Describe virtual networking, including the purpose of Azure virtual networks, Azure virtual subnets, peering, Azure DNS, Azure VPN Gateway, and ExpressRoute
 
