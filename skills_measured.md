@@ -62,17 +62,17 @@
 * Define public and private endpoints :white_check_mark:
 
 ### Describe Azure storage services
-* Compare Azure Storage services
+* Compare Azure Storage services :white_check_mark:
 
-* Describe storage tiers
+* Describe storage tiers :white_check_mark:
 
-* Describe redundancy options
+* Describe redundancy options :white_check_mark:
 
-* Describe storage account options and storage types
+* Describe storage account options and storage types :white_check_mark:
 
-* Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync
+* Identify options for moving files, including AzCopy, Azure Storage Explorer, and Azure File Sync :white_check_mark:
 
-* Describe migration options, including Azure Migrate and Azure Data Box
+* Describe migration options, including Azure Migrate and Azure Data Box :white_check_mark:
 
 ### Describe Azure identity, access, and security
 * Describe directory services in Azure, including Microsoft Entra ID and Microsoft Entra Domain Services
