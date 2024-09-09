@@ -109,9 +109,9 @@
 * Describe the purpose of resource locks
 
 ### Describe features and tools for managing and deploying Azure resources
-* Describe the Azure portal
+* Describe the Azure portal :white_check_mark:
 
-* Describe Azure Cloud Shell, including Azure Command-Line Interface (CLI) and Azure PowerShell
+* Describe Azure Cloud Shell, including Azure Command-Line Interface (CLI) and Azure PowerShell :white_check_mark:
 
 * Describe the purpose of Azure Arc :white_check_mark:
 
