@@ -108,19 +108,19 @@
 
 * Describe the purpose of resource locks
 
-### Describe features and tools for managing and deploying Azure resources
+### Describe features and tools for managing and deploying Azure resources :white_check_mark:
 * Describe the Azure portal :white_check_mark:
 
 * Describe Azure Cloud Shell, including Azure Command-Line Interface (CLI) and Azure PowerShell :white_check_mark:
 
 * Describe the purpose of Azure Arc :white_check_mark:
 
-* Describe infrastructure as code (IaC)
+* Describe infrastructure as code (IaC) :white_check_mark:
 
 * Describe Azure Resource Manager (ARM) and ARM templates :white_check_mark:
 
 ### Describe monitoring tools in Azure
-* Describe the purpose of Azure Advisor
+* Describe the purpose of Azure Advisor :white_check_mark:
 
 * Describe Azure Service Health
 
