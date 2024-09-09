@@ -1,5 +1,5 @@
 ## Describe cloud concepts (25–30%)
-### Describe cloud computing
+### Describe cloud computing :white_check_mark:
 * Define cloud computing :white_check_mark:
 
 * Describe the shared responsibility model :white_check_mark:
@@ -12,7 +12,7 @@
 
 * Compare cloud pricing models :white_check_mark:
 
-* Describe serverless
+* Describe serverless :white_check_mark:
 
 ### Describe the benefits of using cloud services
 * Describe the benefits of high availability and scalability in the cloud
@@ -48,7 +48,7 @@
 
 * Describe the hierarchy of resource groups, subscriptions, and management groups :white_check_mark:
 
-### Describe Azure compute and networking services
+### Describe Azure compute and networking services :white_check_mark:
 * Compare compute types, including containers, virtual machines, and functions :white_check_mark:
 
 * Describe virtual machine options, including Azure virtual machines, Azure Virtual Machine Scale Sets, availability sets, and Azure Virtual Desktop :white_check_mark:
@@ -61,7 +61,7 @@
 
 * Define public and private endpoints :white_check_mark:
 
-### Describe Azure storage services
+### Describe Azure storage services :white_check_mark:
 * Compare Azure Storage services :white_check_mark:
 
 * Describe storage tiers :white_check_mark:
