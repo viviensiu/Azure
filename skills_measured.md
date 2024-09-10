@@ -119,10 +119,10 @@
 
 * Describe Azure Resource Manager (ARM) and ARM templates :white_check_mark:
 
-### Describe monitoring tools in Azure
+### Describe monitoring tools in Azure :white_check_mark:
 * Describe the purpose of Azure Advisor :white_check_mark:
 
-* Describe Azure Service Health
+* Describe Azure Service Health :white_check_mark:
 
-* Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights
+* Describe Azure Monitor, including Log Analytics, Azure Monitor alerts, and Application Insights :white_check_mark:
 
