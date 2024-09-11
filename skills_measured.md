@@ -89,7 +89,7 @@
 
 * Describe the purpose of the defense-in-depth model
 
-* Describe the purpose of Microsoft Defender for Cloud
+* Describe the purpose of Microsoft Defender for Cloud :white_check_mark:
 
 ## Describe Azure management and governance (30–35%)
 ### Describe cost management in Azure
